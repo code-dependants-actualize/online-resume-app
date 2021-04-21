@@ -1,5 +1,4 @@
 <template>
-  <<<<<<< HEAD
   <div id="show-resume">
     <!-- Header -->
     <h1>{{ first_name }} {{ last_name }}</h1>
