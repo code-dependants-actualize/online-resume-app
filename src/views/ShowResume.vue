@@ -1,22 +1,25 @@
 <template>
   <div class="home">
     <!-- Header -->
-    <h1> {{first_name}} {{last_name}} </h1>
-    <h3> {{email}} | {{phone_number}} </h3>
+    <h1>{{ first_name }} {{ last_name }}</h1>
+    <h3>{{ email }} | {{ phone_number }}</h3>
     <!-- Links -->
-    <p> {{ twitter_handle }} | {{ online_resume_url }} | {{ personal_url }} | {{linkedin_url}} | {{ github_url }} </p>
+    <p>{{ twitter_handle }} | {{ online_resume_url }} | {{ personal_url }} | {{ linkedin_url }} | {{ github_url }}</p>
     <!-- Short Bio -->
-    <p> {{ shot_bio }} </p>
+    <p>{{ shot_bio }}</p>
     <!-- Expierence -->
     <h3>Expierence</h3>
     <div id="expierene">
-      <p><strong>{{ company_name }}: {{ job_title }}</strong> {{ start_date }}-{{ end_date }} </p>
+      <p>
+        <strong>{{ company_name }}: {{ job_title }}</strong>
+        {{ start_date }}-{{ end_date }}
+      </p>
       <p>{{ job_details }}</p>
-    </div>  
+    </div>
     <!-- Education -->
     <h3>Education</h3>
     <div id="education">
-      <p>{{ university_name }} {{ degree }}: {{ ed_start_date}}-{{ ed_end_date }}</p>
+      <p>{{ university_name }} {{ degree }}: {{ ed_start_date }}-{{ ed_end_date }}</p>
       <p>{{ ed_details }}</p>
     </div>
     <!-- Skills -->
@@ -30,7 +33,8 @@
       <p>{{ capstone_name }}</p>
       <p>{{ capstone_description }}</p>
       <p>{{ capstone_url }}</p>
-      <img src=""> <!-- this is optional-->
+      <img src="" />
+      <!-- this is optional-->
     </div>
   </div>
 </template>
@@ -75,6 +79,7 @@ export default {
   methods: {
     showResume: function () {
       axios.get("/api/students/" + this.$route.params.id).then((response) => {
+        console.log(response.data);
         this.resumeInfo = response.data;
       });
     },
