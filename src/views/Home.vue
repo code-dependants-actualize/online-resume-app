@@ -6,11 +6,7 @@
           <div class="col mb-4">
             <!-- V-for loop to load resume index -->
             <div class="card">
-              <img
-                src=""
-                class="card-img-top"
-                alt=""
-              />
+              <img src="" class="card-img-top" alt="" />
               <div class="card-body">
                 <h5 class="card-title">{{ resume.first_name }} {{ resume.last_name }}</h5>
                 <p class="card-text">Web Developer</p>
