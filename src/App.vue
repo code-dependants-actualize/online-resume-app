@@ -28,7 +28,6 @@
       </div>
     </header>
     <!-- end header -->
-
     <router-view />
 
     <!-- footer -->
