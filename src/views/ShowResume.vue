@@ -28,7 +28,7 @@
       <p>{{ skill.name }}</p>
     </div>
     <!-- Capstone -->
-    <h3>Capstone</h3>
+    <h3>Capstone</h3> 
     <div id="capstone" v-for="capstone in resumeInfo.capstones" v-bind:key="capstone.id">
       <h6>{{ capstone.name }}</h6>
       <p>{{ capstone.description }}</p>
