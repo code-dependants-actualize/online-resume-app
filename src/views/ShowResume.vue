@@ -32,8 +32,6 @@
       <p>{{ capstone_url }}</p>
       <img src=""> <!-- this is optional-->
     </div>
-
-
   </div>
 </template>
 
