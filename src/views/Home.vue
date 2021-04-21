@@ -59,7 +59,8 @@ export default {
   methods: {
     indexResume: function () {
       axios.get("/api/students").then((response) => {
-        console.log(response);
+        this.resumes = response.data;
+        console.log("all resumes", this.movies);
       });
     },
   },
