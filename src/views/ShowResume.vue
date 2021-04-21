@@ -36,13 +36,16 @@
       <img src="" />
       <!-- this is optional-->
     </div>
+    <a class="twitter-timeline" href="https://twitter.com/big_ben_clock?ref_src=twsrc%5Etfw">Tweets by big_ben_clock</a>
   </div>
 </template>
-
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <style></style>
 
 <script>
 import axios from "axios";
+// import { Tweet, Moment, Timeline } from "vue-tweet-embed";
 export default {
   data: function () {
     return {
