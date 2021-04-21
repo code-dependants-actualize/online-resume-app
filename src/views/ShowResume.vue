@@ -79,6 +79,7 @@ export default {
   methods: {
     showResume: function () {
       axios.get("/api/students/" + this.$route.params.id).then((response) => {
+        console.log(response.data);
         this.resumeInfo = response.data;
       });
     },
