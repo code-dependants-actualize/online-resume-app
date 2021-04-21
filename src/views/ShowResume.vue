@@ -1,5 +1,5 @@
 <template>
-  <div class="show-resume">
+  <div id="show-resume">
     <h1>{{ resumeInfo }}</h1>
   </div>
 </template>
