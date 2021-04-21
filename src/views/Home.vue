@@ -7,19 +7,19 @@
             <!-- V-for loop to load resume index -->
             <div class="card">
               <img
-                src="https://lh3.googleusercontent.com/ogw/ADGmqu_0kyTr1Xovz5G5SGSTsaizg6EEEyDG3TzL2ebQuw=s64-c-mo"
+                src=""
                 class="card-img-top"
                 alt=""
               />
               <div class="card-body">
-                <h5 class="card-title">{{ resume.name }}</h5>
-                <p class="card-text">{{ resume.title }}</p>
+                <h5 class="card-title">{{ resume.first_name }} {{ resume.last_name }}</h5>
+                <p class="card-text">Web Developer</p>
               </div>
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">{{ resume.bio }}</li>
               </ul>
               <div class="card-body">
-                <a href="#" class="card-link">Full resume</a>
+                <router-link v-bind:to="`/student_resumes/${resume.id}`" class="card-link">Full resume</router-link>
               </div>
             </div>
           </div>
@@ -37,20 +37,7 @@ import axios from "axios";
 export default {
   data: function () {
     return {
-      resumes: [
-        { name: "First Last", title: "Web developer", bio: "A short bio" },
-        { name: "First Last", title: "Web developer", bio: "A short bio" },
-        { name: "First Last", title: "Web developer", bio: "A short bio" },
-        { name: "First Last", title: "Web developer", bio: "A short bio" },
-        { name: "First Last", title: "Web developer", bio: "A short bio" },
-        { name: "First Last", title: "Web developer", bio: "A short bio" },
-        { name: "First Last", title: "Web developer", bio: "A short bio" },
-        { name: "First Last", title: "Web developer", bio: "A short bio" },
-        { name: "First Last", title: "Web developer", bio: "A short bio" },
-        { name: "First Last", title: "Web developer", bio: "A short bio" },
-        { name: "First Last", title: "Web developer", bio: "A short bio" },
-        { name: "First Last", title: "Web developer", bio: "A short bio" },
-      ],
+      resumes: [],
     };
   },
   created: function () {
@@ -60,6 +47,7 @@ export default {
     indexResume: function () {
       axios.get("/api/students").then((response) => {
         console.log(response);
+        this.resumes = response.data;
       });
     },
   },
